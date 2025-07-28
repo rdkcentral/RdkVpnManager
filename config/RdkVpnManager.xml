@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ If not stated otherwise in this file or this component's Licenses.txt
+ file the following copyright and licenses apply:
+
+ Copyright 2025 Deutsche Telekom AG
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!--
+ File: RdkVpnManager.xml
+ Description: <TODO>
+ Author: <TODO>
+-->
+<dataModelInfo>
+    <version>1</version>
+    <moduleName>RdkVpnManager</moduleName>
+    <author></author>
+    <description></description>
+    <library/>
+    <objects>
+        <object>
+            <name>X_RDK_Wireguard</name>
+            <objectType>object</objectType>
+            <functions>
+                <func_GetParamBoolValue>WireGuard_GetParamBoolValue</func_GetParamBoolValue>
+	        <func_GetParamUlongValue>WireGuard_GetParamUlongValue</func_GetParamUlongValue>
+                <func_GetParamStringValue>WireGuard_GetParamStringValue</func_GetParamStringValue>
+                <func_SetParamBoolValue>WireGuard_SetParamBoolValue</func_SetParamBoolValue>
+                <func_SetParamStringValue>WireGuard_SetParamStringValue</func_SetParamStringValue>
+                <func_Validate>WireGuard_Validate</func_Validate>
+                <func_Commit>WireGuard_Commit</func_Commit>
+                <func_Rollback>WireGuard_Rollback</func_Rollback>
+            </functions>
+            <parameters>
+	        <parameter>
+                    <name>Enable</name>
+                    <type>boolean</type>
+                    <syntax>bool</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>Status</name>
+                    <type>string: Disabled(0), Enabled(1), Error(2)</type>
+                    <syntax>uint32/mapped</syntax>
+		</parameter>
+		<parameter>
+                    <name>LocalIP</name>
+                    <type>string(45)</type>
+                    <syntax>string</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>Subnet</name>
+                    <type>string(15)</type>
+                    <syntax>string</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>PublicKey</name>
+                    <type>string(64)</type>
+                    <syntax>string</syntax>
+                </parameter>
+	    </parameters>
+    <objects>
+        <object>
+            <name>Tunnel</name>
+            <objectType>staticTable</objectType>
+            <maxInstance>5</maxInstance>
+            <functions>
+                <func_GetEntryCount>WireGuardTunnel_GetEntryCount</func_GetEntryCount>
+                <func_GetEntry>WireGuardTunnel_GetEntry</func_GetEntry>
+                <func_GetParamBoolValue>WireGuardTunnel_GetParamBoolValue</func_GetParamBoolValue>
+                <func_GetParamUlongValue>WireGuardTunnel_GetParamUlongValue</func_GetParamUlongValue>
+                <func_GetParamStringValue>WireGuardTunnel_GetParamStringValue</func_GetParamStringValue>
+                <func_SetParamBoolValue>WireGuardTunnel_SetParamBoolValue</func_SetParamBoolValue>
+                <func_SetParamUlongValue>WireGuardTunnel_SetParamUlongValue</func_SetParamUlongValue>
+                <func_SetParamStringValue>WireGuardTunnel_SetParamStringValue</func_SetParamStringValue>
+                <func_Validate>WireGuardTunnel_Validate</func_Validate>
+                <func_Commit>WireGuardTunnel_Commit</func_Commit>
+                <func_Rollback>WireGuardTunnel_Rollback</func_Rollback>
+            </functions>
+            <parameters>
+                <parameter>
+                    <name>Enable</name>
+                    <type>boolean</type>
+                    <syntax>bool</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>Status</name>
+                    <type>string: Disabled(0), Enabled(1), Error(2)</type>
+                    <syntax>uint32/mapped</syntax>
+                </parameter>
+                <parameter>
+                    <name>PSKEnable</name>
+                    <type>boolean</type>
+                    <syntax>bool</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>PreSharedKey</name>
+                    <type>string(64)</type>
+                    <syntax>string</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>PeerPublicKey</name>
+                    <type>string(64)</type>
+                    <syntax>string</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>RemoteEndPoint</name>
+                    <type>string(45)</type>
+                    <syntax>string</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>RemoteIP</name>
+                    <type>string(256)</type>
+                    <syntax>string</syntax>
+                    <writable>true</writable>
+                </parameter>
+                <parameter>
+                    <name>RemotePort</name>
+                    <type>unsignedInt</type>
+                    <syntax>uint32</syntax>
+                    <writable>true</writable>
+                </parameter>
+            </parameters>
+        </object>
+    </objects>
+	</object>
+    </objects>
+</dataModelInfo>
