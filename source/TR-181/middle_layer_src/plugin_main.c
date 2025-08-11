@@ -22,6 +22,15 @@
 #include "vpn_manager_dml.h"
 #include "ssp_global.h"
 
+/* Uses code which is:
+ *
+ * Copyright 2015 RDK Management
+ * Licensed under the Apache License, Version 2.0
+ *
+ * Copyright [2014] [Cisco Systems, Inc.]
+ * Licensed under the Apache License, Version 2.0
+*/
+
 void *                                g_pDslhDmlAgent;
 COSAGetParamValueByPathNameProc       g_GetParamValueByPathNameProc;
 COSASetParamValueByPathNameProc       g_SetParamValueByPathNameProc;

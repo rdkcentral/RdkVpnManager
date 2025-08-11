@@ -23,6 +23,15 @@
 #include "vpn_manager_internal.h" 
 #include "secure_wrapper.h"
 
+/* Uses code which is:
+ *
+ * Copyright 2015 RDK Management
+ * Licensed under the Apache License, Version 2.0
+ *
+ * Copyright [2014] [Cisco Systems, Inc.]
+ * Licensed under the Apache License, Version 2.0
+*/
+
 /**********************************************************************
 
     caller:     owner of the object

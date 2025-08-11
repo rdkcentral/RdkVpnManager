@@ -25,6 +25,16 @@
 #include "ccsp_dm_api.h"
 #include "execinfo.h"
 
+/*
+ * sig_handler is modified from code which is:
+ *
+ * Copyright 2015 RDK Management
+ * Licensed under the Apache License, Version 2.0
+ *
+ * Copyright [2014] [Cisco Systems, Inc.]
+ * Licensed under the Apache License, Version 2.0
+*/
+
 #define DEBUG_INI_NAME  "/etc/debug.ini"
 
 char                                        g_Subsystem[32]         = {0};

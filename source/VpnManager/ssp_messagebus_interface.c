@@ -21,6 +21,16 @@
 #include "ssp_messagebus_interface.h"
 #include "ssp_internal.h"
 
+/*
+ * sig_handler is modified from code which is:
+ *
+ * Copyright 2015 RDK Management
+ * Licensed under the Apache License, Version 2.0
+ *
+ * Copyright [2014] [Cisco Systems, Inc.]
+ * Licensed under the Apache License, Version 2.0
+*/
+
 ANSC_HANDLE                 bus_handle               = NULL;
 extern char                 g_Subsystem[32];
 extern ANSC_HANDLE          g_MessageBusHandle_Irep;
